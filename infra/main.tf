@@ -8,5 +8,12 @@ terraform {
 }
 
 provider "aws" {
-  # Configuration options
+  region = "sa-east-1"
+
+  default_tags {
+    tags = {
+      owner      = "hugovallada"
+      managed-by = "terraform"
+    }
+  }
 }
