@@ -18,7 +18,7 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v2
       - name: Terraform Init
-        run: terraform init
+        run: terraform init -backend-config="key=project/${GITHUB_REPOSITORY#*/}/terraform.tfstate"
       - name: Terraform Validate
         run: terraform validate
       - name: Terraform Plan
