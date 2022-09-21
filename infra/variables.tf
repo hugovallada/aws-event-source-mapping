@@ -3,8 +3,8 @@ variable "lambda_arn" {
   type = string
 }
 
-variable "stream_arn" {
-  description = "Arn of dynamodb stream"
+variable "dynamodb_table" {
+  description = "Name of the dynamo table"
   type = string
 }
 

@@ -5,6 +5,12 @@ terraform {
       version = "4.31.0"
     }
   }
+
+  backend "s3" {
+    bucket = "hugolopes-terraform-state"
+    key    = "project/terraform/terraform.tfstate"
+    region = "sa-east-1"
+  }
 }
 
 provider "aws" {
