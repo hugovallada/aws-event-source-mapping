@@ -8,7 +8,7 @@ terraform {
 
   backend "s3" {
     bucket = "hugolopes-terraform-state"
-    key    = "project/terraform/terraform.tfstate"
+    key    = "project/aws-event-source-mapping/terraform.tfstate"
     region = "sa-east-1"
   }
 }
